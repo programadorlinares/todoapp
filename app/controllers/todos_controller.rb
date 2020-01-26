@@ -25,7 +25,7 @@ class TodosController < ApplicationController
 
   def update
     @todo=Todo.find(params[:id])
-    if @todo.update(todo_params)
+    if @todo.update(todo_params) # if sentence
       flash[:notice]="Todo was successfully update"  #flash comment
       redirect_to @todo
     else
