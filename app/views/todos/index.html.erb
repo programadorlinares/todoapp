@@ -1,0 +1,20 @@
+<h2>Listing of TODOs</h2>
+
+
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Description</td>
+    <td>Actions</td>
+  </tr>
+  <% @todos.each do |todo| %>
+
+  <tr>
+    <td><%= todo.name %></td>
+    <td><%= todo.description%></td>
+    <td><%= link_to 'show' , todo_path(todo) %></td>
+    <td><%= link_to 'edit', edit_todo_path(todo) %></td>
+    <td><%= link_to 'delete', '#' %></td>
+  </tr>
+  <% end %>
+</table>
