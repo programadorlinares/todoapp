@@ -37,6 +37,13 @@ class TodosController < ApplicationController
     @todos=Todo.all
   end
 
+  def destroy
+    @todo=Todo.find(params[:id])
+    @todo.destroy
+    flash[:notice]="Todo destroyed"
+    redirect_to @todo
+  end
+
   private
 
   def todo_params

@@ -1,5 +1,6 @@
 <h2>Listing of TODOs</h2>
 
+<%= link_to 'New todo' , new_todo_path %>
 
 <table>
   <tr>
@@ -14,7 +15,7 @@
     <td><%= todo.description%></td>
     <td><%= link_to 'show' , todo_path(todo) %></td>
     <td><%= link_to 'edit', edit_todo_path(todo) %></td>
-    <td><%= link_to 'delete', '#' %></td>
+    <td><%= link_to 'delete', todo_path(todo), method: :delete %></td>
   </tr>
   <% end %>
 </table>
